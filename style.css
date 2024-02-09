@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --clr-blue: hsl(223, 87%, 63%);
+  --clr-gray: hsl(0, 0%, 59%);
+  --clr-ight-red: hsl(354, 100%, 66%);
+  --clr-pale-blue: hsl(223, 100%, 88%);
+  --clr-very-dark-blue: hsl(209, 33%, 12%);
+
+  /* FONTS */
+  --ff-libre-franklin: "Libre Franklin", sans-serif;
+}
+
+/* || RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* || GENERAL STYLES */
+html {
+  font-family: var(--ff-libre-franklin);
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-inline: 1.8rem;
+  margin-top: 5.2rem;
+}
+
+.logo {
+  height: 1.05rem;
+}
+
+.logo img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.title {
+  color: var(--clr-gray);
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 1.05rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.title span {
+  color: var(--clr-very-dark-blue);
+  font-weight: 700;
+}
+
+.text {
+  color: var(--clr-very-dark-blue);
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#form {
+  max-width: 25rem;
+  width: 89%;
+}
+
+.email {
+  margin-bottom: 0.7rem;
+}
+
+.field {
+  all: unset;
+  border-radius: 20px;
+  border: 1px solid var(--clr-pale-blue);
+  box-sizing: border-box;
+  color: var(--clr-very-dark-blue);
+  font-size: 0.75rem;
+  padding: 0.75rem 2rem;
+  width: 100%;
+}
+
+.field::placeholder {
+  color: var(--clr-pale-blue);
+  font-size: 0.75rem;
+}
+
+.field:focus {
+  border: 2px solid var(--clr-pale-blue);
+}
+
+.wrong .email__error {
+  display: block;
+}
+
+.email__error {
+  color: var(--clr-ight-red);
+  display: none;
+  font-size: 0.65rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+
+.wrong .field {
+  border: 1px solid var(--clr-ight-red);
+}
+
+.wrong .field:focus {
+  border: 2px solid var(--clr-ight-red);
+}
+
+.submit-btn {
+  all: unset;
+  background-color: var(--clr-blue);
+  border-radius: 20px;
+  box-shadow: var(--clr-blue) 0px 10px 10px -10px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.hero {
+  margin-top: 4.27rem;
+  max-width: 30rem;
+}
+
+.hero img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.container {
+  column-gap: 0.79rem;
+  display: flex;
+  margin-bottom: 1.7rem;
+  margin-top: 7.65rem;
+}
+
+.social-container {
+  border-radius: 100%;
+  border: 1px solid var(--clr-pale-blue);
+  color: var(--clr-blue);
+  display: grid;
+  font-size: 0.93rem;
+  height: 1.9rem;
+  place-content: center;
+  width: 1.9rem;
+}
+
+.social-container:hover {
+  background-color: var(--clr-blue);
+  color: white;
+}
+
+.copyright {
+  color: var(--clr-gray);
+  font-size: 0.62rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    height: 1.62rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin-top: 2.9rem;
+  }
+
+  .text {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #form {
+    column-gap: 1rem;
+    display: flex;
+    max-width: 41rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .email {
+    flex: 0.75;
+    margin-bottom: 0rem;
+  }
+
+  .field {
+    border-radius: 25px;
+    border: 1px solid var(--clr-pale-blue);
+    color: var(--clr-very-dark-blue);
+    font-size: 0.75rem;
+    font-size: 1rem;
+    padding: 1.12rem 2rem;
+  }
+
+  .field::placeholder {
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    flex: 0.24;
+  }
+
+  .email__error {
+    bottom: -3rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    left: 2rem;
+    position: absolute;
+  }
+
+  .submit-btn {
+    border-radius: 25px;
+    box-shadow: var(--clr-blue) 0px 10px 10px -10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1.12rem 2rem;
+    text-align: center;
+  }
+
+  .hero {
+    margin-top: 5.2rem;
+    max-width: 40rem;
+  }
+
+  .container {
+    column-gap: 0.79rem;
+    display: flex;
+    margin-bottom: 1.7rem;
+    margin-top: 4.65rem;
+  }
+
+  .social-container {
+    font-size: 0.95rem;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+  }
+}
